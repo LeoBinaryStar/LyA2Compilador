@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.IO;
+using System.Collections;
 
-namespace Latython.Clases
+namespace Latython
 {
-    internal class LectorSintactico
+    internal class LectorSintaxis
     {
         private string Archivo;
         private ArrayList Llaves = new ArrayList();
@@ -18,7 +20,7 @@ namespace Latython.Clases
 
         public ArrayList GetSeparadores() { return this.Separadores; }
 
-        public LectorSintactico(string archivo)
+        public LectorSintaxis(string archivo)
         {
             FileStream fs = new FileStream(archivo, FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(fs);
@@ -142,7 +144,7 @@ namespace Latython.Clases
 
         }
 
-        public bool IsLlave(string s)
+        public bool EsLlave(string s)
         {
             int index = Llaves.BinarySearch(s);
             if (index >= 0)
@@ -151,7 +153,7 @@ namespace Latython.Clases
             return false;
         }
 
-        public bool IsFuncion(string s)
+        public bool EsFuncion(string s)
         {
             int index = Funciones.BinarySearch(s);
             if (index >= 0)
@@ -160,7 +162,7 @@ namespace Latython.Clases
             return false;
         }
 
-        public bool IsCommentario(string s)
+        public bool EsCommentario(string s)
         {
             int index = Comentario.BinarySearch(s);
             if (index >= 0)
@@ -169,7 +171,7 @@ namespace Latython.Clases
             return false;
         }
 
-        public bool IsSeparador(string s)
+        public bool EsSeparador(string s)
         {
 
             int index = Separadores.BinarySearch(s);

@@ -1,0 +1,169 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\leo_d\\source\\repos\\Latython\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|c:\\users\\leo_d\\source\\repos\\latython\\clases\\lectorsintactico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|solutionrelative:clases\\lectorsintactico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|c:\\users\\leo_d\\source\\repos\\latython\\latydesktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|solutionrelative:latydesktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|c:\\users\\leo_d\\source\\repos\\latython\\clases\\archivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|solutionrelative:clases\\archivos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|c:\\users\\leo_d\\source\\repos\\latython\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|c:\\users\\leo_d\\source\\repos\\latython\\latydesktop.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|solutionrelative:latydesktop.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|C:\\Users\\leo_d\\source\\repos\\Latython\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|C:\\Users\\leo_d\\source\\repos\\Latython\\latydesktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|solutionrelative:latydesktop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|C:\\Users\\leo_d\\source\\repos\\Latython\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|solutionrelative:creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|c:\\users\\leo_d\\source\\repos\\latython\\creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DFFA2CEC-9D01-4267-9B4F-AA68A583751B}|Latython.csproj|solutionrelative:creditos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Archivos.cs",
+              "DocumentMoniker": "C:\\Users\\leo_d\\source\\repos\\Latython\\Clases\\Archivos.cs",
+              "RelativeDocumentMoniker": "Clases\\Archivos.cs",
+              "ToolTip": "C:\\Users\\leo_d\\source\\repos\\Latython\\Clases\\Archivos.cs",
+              "RelativeToolTip": "Clases\\Archivos.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T22:31:20.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Creditos.cs",
+              "DocumentMoniker": "C:\\Users\\leo_d\\source\\repos\\Latython\\Creditos.cs",
+              "RelativeDocumentMoniker": "Creditos.cs",
+              "ToolTip": "C:\\Users\\leo_d\\source\\repos\\Latython\\Creditos.cs",
+              "RelativeToolTip": "Creditos.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAIwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T21:28:00.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Creditos.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\leo_d\\source\\repos\\Latython\\Creditos.cs",
+              "RelativeDocumentMoniker": "Creditos.cs",
+              "ToolTip": "C:\\Users\\leo_d\\source\\repos\\Latython\\Creditos.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Creditos.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T21:23:12.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LectorSintactico.cs",
+              "DocumentMoniker": "C:\\Users\\leo_d\\source\\repos\\Latython\\Clases\\LectorSintactico.cs",
+              "RelativeDocumentMoniker": "Clases\\LectorSintactico.cs",
+              "ToolTip": "C:\\Users\\leo_d\\source\\repos\\Latython\\Clases\\LectorSintactico.cs",
+              "RelativeToolTip": "Clases\\LectorSintactico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T04:41:17.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LatyDesktop.cs",
+              "DocumentMoniker": "C:\\Users\\leo_d\\source\\repos\\Latython\\LatyDesktop.cs",
+              "RelativeDocumentMoniker": "LatyDesktop.cs",
+              "ToolTip": "C:\\Users\\leo_d\\source\\repos\\Latython\\LatyDesktop.cs",
+              "RelativeToolTip": "LatyDesktop.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T15:16:07.284Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LatyDesktop.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\leo_d\\source\\repos\\Latython\\LatyDesktop.Designer.cs",
+              "RelativeDocumentMoniker": "LatyDesktop.Designer.cs",
+              "ToolTip": "C:\\Users\\leo_d\\source\\repos\\Latython\\LatyDesktop.Designer.cs",
+              "RelativeToolTip": "LatyDesktop.Designer.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAawFAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T21:33:37.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\leo_d\\source\\repos\\Latython\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\leo_d\\source\\repos\\Latython\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T20:25:12.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LatyDesktop.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\leo_d\\source\\repos\\Latython\\LatyDesktop.cs",
+              "RelativeDocumentMoniker": "LatyDesktop.cs",
+              "ToolTip": "C:\\Users\\leo_d\\source\\repos\\Latython\\LatyDesktop.cs [Design]",
+              "RelativeToolTip": "LatyDesktop.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T19:47:14.65Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\leo_d\\source\\repos\\Latython\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\leo_d\\source\\repos\\Latython\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwCsAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T17:55:57.423Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -8,10 +8,10 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Latython.Clases;
 using System.Reflection;
 using System.Diagnostics;
 using System.Media;
+using Latython.Latython.Clases;
 
 namespace Latython
 {

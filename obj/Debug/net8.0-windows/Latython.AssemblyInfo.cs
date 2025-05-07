@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Latython")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6c1537671525cd1186e34e728010697ad85ac7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ada8e203be9b789fa80ef27cac941d15483fe8c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Latython")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Latython")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

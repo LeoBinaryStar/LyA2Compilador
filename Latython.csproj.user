@@ -7,7 +7,16 @@
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormMostrarErrores.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LatyDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FlickerFreeRichEditTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="Resources\FormMostrarErrores.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

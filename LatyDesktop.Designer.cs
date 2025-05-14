@@ -52,6 +52,7 @@
             statusStrip1 = new StatusStrip();
             toolStripStatusLabel1 = new ToolStripStatusLabel();
             carga = new ToolStripProgressBar();
+            Load += new System.EventHandler(this.LatyDesktop_Load);
             menuStrip1 = new MenuStrip();
             menuStrip1.SuspendLayout();
             menuStrip2.SuspendLayout();

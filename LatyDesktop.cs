@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using System.Reflection;
 using System.Diagnostics;
 using System.Media;
-using Latython.Latython.Clases;
+using Latython.Clases;
 
 namespace Latython
 {
@@ -70,7 +70,7 @@ namespace Latython
             {
                 palabrasModificadas[count].Palabra = igual.Value;
                 palabrasModificadas[count].Posicion = igual.Index;
-                palabrasModificadas[count].Longuitud = igual.Length; 
+                palabrasModificadas[count].Longuitud = igual.Length;
                 count++;
             }
 
@@ -82,17 +82,17 @@ namespace Latython
         {
             Color Color = Color.Black;
 
-            if (LectorSintactico.EsFuncion(s))
+            if (LectorSintactico.IsFuncion(s))
             {
                 Color = Color.Fuchsia;
             }
 
-            if (LectorSintactico.EsLlave(s))
+            if (LectorSintactico.IsLlave(s))
             {
                 Color = Color.Blue;
             }
 
-            if (LectorSintactico.EsSeparador(s))
+            if (LectorSintactico.IsSeparador(s))
             {
                 Color = Color.DarkOrange;
             }
@@ -100,7 +100,7 @@ namespace Latython
 
             return Color;
         }
-            private void SintaxisLinea()
+        private void SintaxisLinea()
         {
             int Inicio = richTextBox1.SelectionStart;
             int Longuitud = richTextBox1.SelectionLength;
@@ -167,7 +167,7 @@ namespace Latython
 
         private void CrearSintaxisColorAllText(string s)
         {
-             EventosActivos = true;
+            EventosActivos = true;
 
             int CurrentSelectionStart = richTextBox1.SelectionStart;
             int CurrentSelectionLength = richTextBox1.SelectionLength;
@@ -233,7 +233,55 @@ namespace Latython
 
         }
 
+        #region Inicializadores
+
         private delegate void ANALIZADOR_SEMANTICO_SINTACTICO__();
+
+        private void GetCodigoEscrito()
+        {
+            try
+            {
+                string[] data = richTextBox1.Lines;
+                CodigoEscrito = new List<string>();
+                CodigoEscrito.AddRange(data);
+            }
+            catch { }
+        }
+
+        private void CodigoInicio()
+        {
+            string[] codigo = new string[]
+            {
+                "espacio LatyDesktop",
+                "{",
+                "     usar sistema;",
+                "     usar sistema.coleccion;",
+                "     usar sistema.componentes;",
+
+                "     publico clase laty",
+                "     {",
+                "       laty_inicio()",
+                "       {",
+                "       }",
+                "     }",
+                "}"
+            };
+            richTextBox1.Lines = codigo;
+        }
+
+        #endregion
+
+        private void LatyDesktop_Load(object sender, EventArgs e)
+        {
+            LectorSintactico = new LectorSintaxis("laty.syntax");
+            CodigoInicio();
+            this.CrearSintaxisColorAllText(richTextBox1.Text);
+            Assembly assembly = Assembly.GetExecutingAssembly();
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+            string version = fvi.FileVersion;
+            this.Text = "LATY# V" + version;
+            this.richTextBox1.AcceptsTab = true;
+        }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
@@ -260,7 +308,94 @@ namespace Latython
             carga.Style = ProgressBarStyle.Continuous;
             carga.Overflow = ToolStripItemOverflow.Always;
             carga.Increment(100);
-               //Funcion para ela analizador
+            System.Threading.Thread hilo = 
+                new System.Threading.Thread(delegate()
+                {
+                    ANALIZADOR_SEMANTICO_SINTACTICO__ analizador = new ANALIZADOR_SEMANTICO_SINTACTICO__(ANALIZAR_COMPILAR);
+                    this.Invoke(analizador);
+                });
+            hilo.Start();
+        }
+
+        private void ANALIZAR_COMPILAR()
+        {
+            Compilador compilador = new Compilador();
+            AnalizadorSemantico semantico = new AnalizadorSemantico();
+            List<string> CodigoComputado = new List<string>();
+            System.IO.Stream str = Properties.Resources.latysound;
+            SoundPlayer LatySound = new SoundPlayer(str);
+            LatySound.Load();
+            avisos.Text = "";
+            try
+            {
+                carga.Increment(20);
+                avisos.Text = "Analizando codigo... (20%)";
+                List<string> Codigo = new List<string>();
+                Codigo.AddRange(richTextBox1.Lines);
+                semantico.SetCodigoAnalizar(Codigo);
+                semantico.Computar(out CodigoComputado);
+                carga.Increment(30);
+                List<string> Errores = semantico.MostrarErrores();
+                if (Errores.Count != 0)
+                {
+                    LatySound.Play();
+                    avisos.Text = "Error al compilar... ";
+                    FormMostrarErrores.ListaErrores = Errores;
+                    FormMostrarErrores FrmError = new FormMostrarErrores();
+                    FrmError.Show();
+                    avisos.Text = "sin notificaciones...";
+                    carga.Increment(100);
+                    return;
+                }
+                string direccion = Archivos.Direccion;
+                if (direccion == null || direccion == "")
+                {
+                    GetCodigoEscrito();
+                    Archivos.Guardar(CodigoEscrito);
+                    direccion = Archivos.Direccion;
+                }
+
+                string[] trozo_direccion = direccion.Split(new string[] { "\\", ".laty" }, StringSplitOptions.RemoveEmptyEntries);
+                string nombre = trozo_direccion[trozo_direccion.Length - 1];
+                if (nombre == "" || string.IsNullOrEmpty(nombre))
+                    nombre = "Chompipe";
+                avisos.Text = "Compilando... (60%)";
+                carga.Increment(60);
+
+                var d = compilador.CheckCodigoAcompilar(CodigoComputado);
+                var k = compilador.GenerarCodigoCsharp(d, "__IL_SISTEMA_INT");
+                List<string> ILerr = new List<string>();
+                bool compilado = compilador.CompilarCodigo(k, nombre + ".exe", out ILerr);
+
+                if (compilado)
+                {
+                    Process p = new Process();
+                    ProcessStartInfo psi = new ProcessStartInfo(System.IO.Directory.GetCurrentDirectory() + @"\" + nombre + ".exe");
+                    p.StartInfo = psi;
+                    p.Start();
+                    avisos.Text = "UN LATY SE HA COMPILADO... ";
+                    avisos.Text = "sin notificaciones...";
+                }
+                else
+                {
+                    if (ILerr.Count >= 1)
+                    {
+                        FormMostrarErrores.ListaErrores = ILerr;
+                        FormMostrarErrores FrmError = new FormMostrarErrores();
+                        FrmError.Show();
+                    }
+                    LatySound.Play();
+                    avisos.Text = "Compilacion exitosa pero con error en IL";
+                }
+                carga.Increment(100);
+
+            }
+            catch (Exception ex)
+            {
+                LatySound.Play();
+                carga.Increment(0);
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
@@ -270,7 +405,11 @@ namespace Latython
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
-
+            if (EventosActivos)
+                return;
+            ColorSyntaxEditor.FlickerFreeRichEditTextBox._Paint = false;
+            SintaxisLinea();
+            ColorSyntaxEditor.FlickerFreeRichEditTextBox._Paint = true;
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)

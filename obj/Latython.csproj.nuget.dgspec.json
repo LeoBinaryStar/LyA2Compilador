@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leo_d\\source\\repos\\Latython\\Latython.csproj": {}
+    "C:\\Users\\leo_d\\LyA2Compilador-master\\LyA2Compilador-master\\Latython.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leo_d\\source\\repos\\Latython\\Latython.csproj": {
+    "C:\\Users\\leo_d\\LyA2Compilador-master\\LyA2Compilador-master\\Latython.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leo_d\\source\\repos\\Latython\\Latython.csproj",
+        "projectUniqueName": "C:\\Users\\leo_d\\LyA2Compilador-master\\LyA2Compilador-master\\Latython.csproj",
         "projectName": "Latython",
-        "projectPath": "C:\\Users\\leo_d\\source\\repos\\Latython\\Latython.csproj",
+        "projectPath": "C:\\Users\\leo_d\\LyA2Compilador-master\\LyA2Compilador-master\\Latython.csproj",
         "packagesPath": "C:\\Users\\leo_d\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leo_d\\source\\repos\\Latython\\obj\\",
+        "outputPath": "C:\\Users\\leo_d\\LyA2Compilador-master\\LyA2Compilador-master\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
